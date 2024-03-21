@@ -1,6 +1,10 @@
   /* Create an accessible color palette using var()function */
   /* https://www.w3schools.com/css/css3_variables.asp */
   
+  :root {
+    --bg: #CFC096;
+  }
+
   form {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -11,7 +15,7 @@
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: #702082;
-    background: #CFC096;
+    background: var(--bg);
   }
 
   .radio {
@@ -26,7 +30,7 @@
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
-    background: #CFC096;
+    background: var(--bg);
     color: #9B9A6D;
   }
 
@@ -55,4 +59,19 @@
 
   input[type="submit"]:hover {
     background-color: #45a049;
+  }
+
+  .radio {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+  }
+
+  .navskip {
+    position: absolute;
+    left: -1000px;
+  }
+
+  .navskip:focus {
+    left: unset;
   }
